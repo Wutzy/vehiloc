@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block title %}Véhiloc - Ajouter un véhicule{% endblock %}
+{% block body %}
+    <section id="add">
+        <a href="index.html">← Retour</a>
+        <h1>Ajouter une voiture</h1>
+        {{ form_start(form) }}
+
+        <div class="input">
+            {{ form_row(form.name) }}
+        </div>
+        <div class="input">
+            {{ form_row(form.description) }}
+        </div>
+        <div class="flex-input">
+            <div class="input">
+                {{ form_row(form.price_month) }}
+            </div>
+            <div class="input">
+                {{ form_row(form.price_day) }}
+            </div>
+        </div>
+        <div class="flex-input">
+            <div class="input">
+                {{ form_row(form.seats) }}
+            </div>
+            <div class="input">
+                {{ form_row(form.gearbox) }}
+            </div>
+        </div>
+        
+        <button class="btn-add" type="submit">Ajouter</button>
+
+        {{ form_end(form) }}
+    </section>
+{% endblock %}
